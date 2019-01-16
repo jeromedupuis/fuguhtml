@@ -1,0 +1,11 @@
+$icons: "ellipsis";
+
+@each $icon in $icons {
+  .icon-#{$icon} {
+    width: 18px;
+    height: 18px;
+    background: url(/static/img/svg/018-ellipsis.svg);
+    background-size: 100% auto;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,53 @@
+$main-color: #43a9c8;
+$size: 24px;
+$width: 40px;
+
+.ui-input--switch-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+
+	height: $size;
+	width: $size * 2;
+	position: relative;
+
+	.switch-bar_circle {
+		width: $size;
+		height: $size;
+    border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+    transition: all ease .5s;
+	}
+	.switch-bar {
+    transition: all ease .5s;
+		background: #f3f3f3;
+		width: $width;
+		height: $size;
+		position: absolute;
+		border-radius: 26px;
+	}
+	&.turn--off {
+		.switch-bar {
+			background: #f3f3f3;
+		}
+    .switch-bar_circle {
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+			background: white;
+			margin-left: 0;
+		}
+	}
+	&.turn--on {
+		.switch-bar {
+			background: #{$main-color};
+		}
+		.switch-bar_circle {
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+			background: white;
+			margin-left: #{$size - 6};
+		}
+	}
+  &.state--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

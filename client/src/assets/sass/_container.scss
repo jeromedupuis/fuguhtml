@@ -1,0 +1,12 @@
+.section-container {
+  padding:12px;
+  &.is--fluid {
+    max-width: 1670px;
+    width: 100%;
+    padding: 12px 135px;
+    margin: 0 auto;
+  }
+}
+.section-loader {
+  padding: 50px;
+}

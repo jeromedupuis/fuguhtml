@@ -1,0 +1,57 @@
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+@mixin content($font:"\e088") {
+  content: $font;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Glyphicons Halflings';
+  font-size: 18px;
+  padding-right: 12px;
+}
+
+.notification-list-item {
+  width: 380px;
+  padding: 18px 24px 18px 16px;
+  background: #fff;
+  font-size: 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-out;
+  display: table;
+  text-indent: -17px;
+  padding-left: 53px;
+  cursor: pointer;
+  box-sizing: border-box;
+  + .notification-list-item {
+    margin-top: 20px;
+  }
+  &--default {
+    color: #333;
+  }
+  &--error {
+    color: #dc3545;
+    &:before {
+      color: #dc3545;
+      @include content("\e088")
+    }
+  }
+  &--warning {
+    color: #ffc107;
+    &:before {
+      color: #ffc107;
+      @include content("\e090")
+    }
+  }
+  &--success {
+    color: #28a745;
+    &:before {
+      color: #28a745;
+      @include content("\e089")
+    }
+  }
+}

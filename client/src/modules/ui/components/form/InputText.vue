@@ -1,0 +1,54 @@
+<template>
+  <div class="ui-input--text">
+    <input type="text" v-model="model" :name="name" :placeholder="placeholder" :disabled="disabled" @change="onChange" @keyup="onKeyup" />
+    <span></span>
+  </div>
+</template>
+
+<style lang="sass">
+  @import "../../assets/sass/form/input_text";
+</style>
+
+<script>
+export default {
+  props: {
+    value: {
+      required: false
+    },
+    name: {
+      type: String,
+      required: false
+    },
+    placeholder: {
+      type: String,
+      required: false
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+  data() {
+    return {
+      model: undefined
+    };
+  },
+  watch: {
+    value (value) {
+      this.model = value;
+    },
+  },
+  mounted() {
+    this.model = this.value;
+  },
+  methods: {
+    onChange() {
+      this.$emit('input', this.model);
+    },
+    onKeyup() {
+      this.$emit('input', this.model);
+    }
+  }
+};
+</script>

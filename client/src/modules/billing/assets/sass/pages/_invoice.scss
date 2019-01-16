@@ -1,0 +1,104 @@
+.invoice-resume {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+  &Row {
+    display: table-row;
+  }
+  &Cell {
+    display: table-cell;
+    width: 18%;
+    padding: 0 1%;
+    border-right: 1px solid #ddd;
+  }
+  label {
+    color: #b2b2b2;
+    font-size: 12px;
+    font-style: italic;
+  }
+  p {
+    line-height: 61px;
+    text-align: center;
+
+    &.text--status {
+      font-size: 24px;
+    }
+    &.text--id {
+      font-size: 18px;
+    }
+    &.text--amount {
+      font-size: 34px;
+    }
+    &.text--date {
+      font-size: 18px;
+    }
+  }
+}
+
+.invoice-detail_container {
+  background: #f6f6f6;
+  padding:24px;
+  border-radius: 8px;
+
+  .ui-table {
+    td, th {
+      &.col--item {
+        width:200px;
+      }
+      &.col--unity {
+        width:70px;
+      }
+      &.col--quantity,
+      &.col--unit_price,
+      &.col--item-price {
+        width: 100px;
+      }
+    }
+    th {
+      text-align: center;
+    }
+    td {
+      &.col--quantity,
+      &.col--unit_price,
+      &.col--item_price,
+      &.col--footer_value,
+      &.col--discount_value {
+        text-align: right;
+      }
+      &.col--unity {
+        text-align: center;
+      }
+      &.col--footer_items_price,
+      &.col--footer_vat,
+      &.col--footer_amount_due {
+        text-align: left;
+      }
+    }
+  }
+  .text--bold {
+    font-weight: bold;
+  }
+}
+.invoice-provider_container {
+  margin-top:24px;
+  p {
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 6px;
+  }
+  .section-container {
+    background: #f6f6f6;
+    padding: 24px;
+    border-radius: 8px;
+    &.background--transparent {
+      background:transparent;
+    }
+    label {
+      color: #b2b2b2;
+      font-size: 12px;
+      font-style: italic;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

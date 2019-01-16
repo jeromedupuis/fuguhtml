@@ -1,0 +1,118 @@
+.ui-table_head {
+  margin-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.ui-table {
+  width:100%;
+  overflow:hidden;
+  border-collapse: collapse;
+  position: relative;
+
+  .thead--adjustement {
+    height:15px;
+    background: transparent;
+  }
+  .tbody--adjustement {
+    height:15px;
+    background: transparent;
+  }
+  table {
+    width:100%;
+    overflow:hidden;
+    border-collapse: collapse;
+    position: relative;
+  }
+  thead {
+    position: relative;
+    th, td {
+      padding-bottom: 7px;
+      &:after {
+        content:"";
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        background: #ddd;
+        left: 0;
+        top: 44px;
+      }
+    }
+  }
+  tbody {
+    td, th {
+      height: 32px;
+    }
+    tr {
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+    + tbody {
+      position: relative;
+      > tr:first-child {
+        th, td {
+          padding-top: 3px;
+          padding-bottom: 2px;
+          &:after {
+            content:"";
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            background: #ddd;
+            left: 0;
+            top: -7px;
+          }
+        }
+      }
+    }
+  }
+  td, th {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+    word-break: break-all;
+    border-right:1px solid #ddd;
+    position: relative;
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      vertical-align: middle;
+    }
+
+    &.col--checkbox {
+      width:25px;
+      text-align: center;
+    }
+    &.col--id {
+      width: 52px;
+      text-align: center;
+    }
+    &.col--ellipsis {
+      width:52px;
+      text-align: right;
+    }
+  }
+
+  &.col--noborder {
+    td, th {
+      border: none;
+    }
+  }
+  .ui-table_row_icon {
+    width: 18px;
+    height: auto;
+    display: inline-block;
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 32px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.project-project_resume {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom:20px;
+  &Row {
+    display: table-row;
+  }
+  &Cell {
+    display: table-cell;
+    width: 18%;
+    padding:0 1%;
+    border-right:1px solid #ddd;
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  label {
+    color:#b2b2b2;
+    font-size: 12px;
+    font-style: italic;
+  }
+  p {
+    line-height: 61px;
+    text-align: center;
+    &.text--length {
+      font-size: 40px;
+    }
+    &.text--progression {
+      font-size:40px;
+    }
+    &.text--days_left {
+      font-size:40px;
+    }
+    &.text--start_date {
+      font-size:18px;
+    }
+    &.text--due_date {
+      font-size:18px;
+    }
+  }
+}

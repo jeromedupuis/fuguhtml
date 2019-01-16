@@ -1,0 +1,54 @@
+.ui-loader--circle {
+  position: relative;
+  width: 28px;
+	height: 28px;
+	margin: 0 auto;
+	border:2px solid #ccc;
+  border-radius: 50%;
+  animation: Loader 0.75s infinite linear;
+  position:relative;
+  border-top-color: transparent;
+  &--inline {
+    display: inline-block;
+  }
+
+	&.size--tiny {
+		width:10px;
+		height:10px;
+	}
+	&.size--medium {
+		width: 40px;
+		height:40px;
+	}
+	&.size--large {
+		width:60px;
+		height:60px;
+	}
+
+  &:before, &:after {
+    content: '';
+    left: -2px;
+    top: -2px;
+    display: none;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    border-radius: 50%;
+  }
+  &:after {
+    display: block;
+    border-color: transparent;
+    border-top-color: #ccc;
+    animation: Loader 1.25s infinite linear;
+  }
+}
+
+@keyframes Loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

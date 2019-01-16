@@ -1,0 +1,47 @@
+.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap : wrap;
+	margin:0 -6px;
+
+	+ .row {
+		margin-top: 12px;
+
+		&.margin--double {
+			margin-top:24px;
+		}
+	}
+
+	.col {
+		-webkit-flex-basis: 0;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+	@for $i from 1 through 12 {
+		$colWidth: 8.333333;
+
+		.col-#{$i} {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 #{$colWidth*$i + '%'};
+			-ms-flex: 0 0 #{$colWidth*$i + '%'};
+			flex: 0 0 #{$colWidth*$i + '%'};
+			max-width:#{$colWidth*$i + '%'};
+			padding:0 6px;
+		}
+	}
+	.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+	}
+}
+.col-wrap {
+	padding:30px;
+}

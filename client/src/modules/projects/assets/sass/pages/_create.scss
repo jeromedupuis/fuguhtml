@@ -1,0 +1,91 @@
+.layout-clientArea {
+  &.page--createProject {
+    .page-createProject_wrapper {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .page-createProject_wrapper {
+      padding: 24px;
+      //box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+      border-radius: 12px;
+      border-radius: 12px;
+      margin-top:24px;
+      margin-bottom: 24px;
+    }
+    .page-createProject_wrapper_submit {
+      margin-top:24px;
+      padding-top:24px;
+      border-top: 1px solid #e5e5e5;
+      text-align: right;
+    }
+  }
+}
+
+.project-create_formTitle {
+  margin-bottom: 24px;
+  img, span {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  img {
+    height: 32px;
+    width: auto;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    line-height: 60px;
+    font-family: 'Abel', sans-serif;
+    font-size: 36px;
+  }
+}
+.project-create_inputTitle {
+  margin-bottom: 12px;
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.ui-input--number {
+  &.project-create_input--count {
+    width: 72px;
+    min-width: 72px;
+    font-size: 20px;
+    font-family: 'Abel', sans-serif;
+    vertical-align: middle;
+    display: inline-block;
+
+    input {
+      text-align: center;
+      -webkit-appearance: none;
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+}
+
+.project-create_buttonCount {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border: none;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 10px;
+  img {
+    height: 30px;
+    width: auto;
+  }
+}
+
+.project-create_step--step3 {
+  .row + .row {
+    margin-top:24px;
+
+		&.margin--double {
+			margin-top:48px;
+		}
+  }
+}
